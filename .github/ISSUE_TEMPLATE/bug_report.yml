@@ -1,0 +1,43 @@
+name: Bug report
+description: Report a reproducible problem with the app
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve the project. Remove all secrets and private information before submitting.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Explain the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open the app\n2. Search for ...\n3. Select ..."
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      placeholder: Chrome 126 on macOS 15, desktop
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add screenshots or sanitized console errors if helpful.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I checked existing issues for duplicates.
+          required: true
+        - label: I removed API keys, tokens, and private information.
+          required: true
